@@ -1,0 +1,20 @@
+13:08:04 **** Incremental Build of configuration Debug for project stm_spi ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/timer1.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/timer1.d" -MT"Core/Src/timer1.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/timer1.o"
+arm-none-eabi-gcc -o "stm_spi.elf" @"objects.list"   -mcpu=cortex-m4 -T"F:\stm32\stm32_study_can\stm_spi\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm_spi.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm_spi.elf
+ 
+arm-none-eabi-size   stm_spi.elf 
+arm-none-eabi-objdump -h -S  stm_spi.elf  > "stm_spi.list"
+arm-none-eabi-objcopy  -O binary  stm_spi.elf  "stm_spi.bin"
+   text	   data	    bss	    dec	    hex	filename
+   5780	     32	   1568	   7380	   1cd4	stm_spi.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm_spi.bin
+ 
+Finished building: stm_spi.list
+ 
+
+13:08:07 Build Finished. 0 errors, 0 warnings. (took 2s.246ms)
+
