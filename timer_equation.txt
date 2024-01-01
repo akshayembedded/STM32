@@ -1,0 +1,5 @@
+Single count for timer = CK_PSC* (pre+1) 
+Total Time period = Single count for timer * ARR
+
+1us = 72Mhz * (pr+1)
+CK_PSC= 72MHz
